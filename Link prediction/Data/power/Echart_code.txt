@@ -1,0 +1,182 @@
+app.title = '堆叠条形图';
+
+option = {
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+        toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    legend: {
+        data: ['CN', 'LP','CNEdge_1','Node2vec','LargeVis', 'LINE','GraphWave']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    yAxis:  {
+        type: 'value',
+        axisLabel: {
+            show: true,
+        textStyle: {
+          fontSize : 20      //更改坐标轴文字大小
+        }
+     },
+    },
+    xAxis: {
+        type: 'category',
+        axisLabel: {
+            show: true,
+        textStyle: {
+          fontSize : 20      //更改坐标轴文字大小
+        }
+     },
+        data: ['2', '3', '4', '5', '6', '7', '8', '9',
+        '10', '11', '12', '13', '14', '15', '16', '17',
+        '18','19', '20', '22', '24', '25', '26', '28','31','36','39']
+    },
+    series: [
+        {
+            name: 'CN',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [153]
+        },
+        {
+            name: 'LP',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: [153, 95]
+        },
+        {
+            name: 'CNEdge_1',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: ['153',
+ '86',
+ '65',
+ '46',
+ '46',
+ '34',
+ '20',
+ '21',
+ '11',
+ '8',
+ '6',
+ '4',
+ '3',
+ '2',
+ '1']
+        },
+        {
+            name: 'Node2vec',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: ['149',
+ '93',
+ '68',
+ '50',
+ '49',
+ '44',
+ '27',
+ '25',
+ '9',
+ '11',
+ '6',
+ '5',
+ '4',
+ '1',
+ '5',
+ '3',
+ '1',
+ '2',
+ '1',
+ '1',
+ '1',
+ '1',
+ '1',
+ '1',
+ '1',
+ '1',
+ '1']
+        },
+        {
+            name: 'LargeVis',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: ['152','94','72','53','58','52','26',
+            '26','16','14','9','11','7', '3', '6', '3', 
+            '1', '4', '1', '1', '1','2']
+        },
+        {
+            name: 'LINE',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: ['111', '65', '46', '37', '36', '28',
+            '23', '16','12', '8', '5', '4', '5', '2', '4',
+            '3', '1', '1','NAN', '2', '1','1', '1']
+        },
+                {
+            name: 'GraphWave',
+            type: 'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'insideRight'
+                }
+            },
+            data: ['76', '36', '37', '24','27', '30', 
+            '16', '20', '8','9','3','9','6','4','4','2',
+            '1','3', 'NAN', 'NAN', '1', '1', '2', '1', '1', '1', '1']
+        }
+    ]
+};
